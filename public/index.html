@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>✨ Freeplay Z•O•N•E ✨</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="title" content="Freeplay Z•O•N•E" />
+    <meta name="description" content="A ZONE for Freeplay 2020 by @jemztones and @haraiva" />
+
+
+    <!-- SEO / social media-->
+    <meta name="author" content="@jemztones and @haraiva" />
+    <meta name="copyright" content="@jemztones and @haraiva" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="A ZONE for Freeplay 2020 by @jemztones and @haraiva" />
+    <meta name="keywords" content="Game,Art,videogame" />
+
+    <meta property="og:image" content="https://freeplay-zone.glitch.me/assets/market/nightmarket-Entrance-daytime.png" />
+    <meta property="og:title" content="✨ Freeplay Z•O•N•E ✨" />
+    <meta property="og:description"
+        content="A ZONE for Freeplay 2020 by @jemztones and @haraiva" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@free_play" />
+    <meta name="twitter:title" content="✨ Freeplay Z•O•N•E ✨" />
+    <meta name="twitter:description"
+        content="A ZONE for Freeplay 2020 by @jemztones and @haraiva" />
+    <meta name="twitter:image" content="https://freeplay-zone.glitch.me/assets/market/nightmarket-Entrance-daytime.png" />
+
+    <!-- This is a standard p5.js index, NOTE the p5.dom.min.js -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
+    <script src="p5.play.js"></script>
+    <script defer src="client.js"></script>
+    <script defer src="clientMod.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+	<link rel="icon" type="image/png" href="favicon.png" sizes="16x16">
+</head>
+
+<body>
+
+    <div id="canvas-container" oncontextmenu="return false;">
+        <!-- the lobby element is displayed before the canvas is loaded -->
+        <div id="lobby-container" style="display: none;">
+            <div class="content-center">
+
+                <div class="lobby-message">What's your name?</div>
+                <form action="" onsubmit="return nameOk()">
+                    <input id="lobby-field" class="lobby-field" placeholder="username" maxlength="16" autocomplete="off"
+                        autocorrect="off" autocapitalize="off" spellcheck="false" />
+                </form>
+                <div id="lobby-error" class="lobby-error-message"></div>
+
+
+            </div>
+        </div>
+		<div id="acknowledgement-container" style="display: none;">
+            <div class="content-acknowledgement">
+				<div class="acknowledgement-message">
+					<p>Freeplay acknowledges the Wurundjeri & Boon Wurrung people of the Kulin Nation as the Traditional Custodians of the Lands upon which the festival takes place.</p>
+
+					<p>Freeplay Zone was created on the lands of the Gadigal people of the Eora Nation and the Wurundjeri people of the Kulin Nation.</p>
+
+					<p>We pay our respects to elders past, present and emerging.</p>
+
+					<p>Freeplay also stands in solidarity with black communities, both here and around the world against prejudice, injustice and violence. Black lives matter is not a new or revolutionary statement, but it is not that needs to be said and said again and said louder.</p>
+				</div>
+            </div>
+        </div>
+        <div id="video-container" style="display: none;">
+            <div class="content-top">
+                <iframe id="yt_video" width="420" height="236" frameborder="0"></iframe>
+            </div>
+        </div>
+
+
+
+    </div>
+    <div id="interface">
+        <!-- talk form is below canvas getTalkInput is what happens when return is pressed-->
+        <form id="join-form" action="" onsubmit="return joinGame()" style="display: none;">
+            <!-- call the function below on button press-->
+            <button class="join-button" type="button" onclick="joinGame();">JOIN</button>
+        </form>
+
+        <form id="acknowledgement-form" action="" onsubmit="return acceptAcknowledgement()" style="display: none;">
+            <!-- call the function below on button press-->
+            <button class="user-button" type="button" onclick="acceptAcknowledgement();">ACKNOWLEDGE</button>
+        </form>
+
+        <form id="user-form" action="" onsubmit="return nameOk()" style="display: none;">
+            <!-- call the function below on button press-->
+            <button class="user-button" type="button" onclick="nameOk();">CONTINUE</button>
+        </form>
+
+        <form id="avatar-form" action="" onsubmit="return bodyOk()" style="display: none;">
+            <!-- call the function below on button press-->
+            <button class="avatar-button" type="button" onclick="bodyOk();">CONTINUE</button>
+        </form>
+
+        <form id="talk-form" action="" onsubmit="return getTalkInput()" style="display: none;">
+            <input class="talk-field" placeholder="TYPE HERE" maxlength="40" id="chatField" autocomplete="off" />
+            <!-- call the function below on button press-->
+            <button class="talk-button" type="button" onclick="getTalkInput();">TALK</button>
+        </form>
+
+
+    </div>
+    <div id="info" class="info"><a href="https://www.freeplay.net.au/2020-festival/" target="_blank">>FREEPLAY 2020</a> Based on <a href="http://likelike.org/shows/" target="_blank">>LIKELIKE.ORG</a></div>
+
+</body>
+
+</html>
