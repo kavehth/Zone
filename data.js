@@ -437,7 +437,7 @@ module.exports.ROOMS = {
     },
 
     freeplayOutside: {
-        bg: "market/nightmarket-Entrance-bg.png",
+        bg: "market/243281506_1285173875244686_6257270391588318534_n.png",
         frames: 2,
         frameDelay: 30,
         avatarScale: 2,
@@ -455,7 +455,7 @@ module.exports.ROOMS = {
     },
 	
     freeplayOutside: {
-        bg: "market/nightmarket-Entrance-bg.png",        frameDelay: 30,
+        bg: "duncan/243281506_1285173875244686_6257270391588318534_n.png",        frameDelay: 30,
         avatarScale: 2,
         pageBg: "#ab5236",
         area: "market/nightmarket-Entrance-areas.png",
@@ -512,7 +512,7 @@ module.exports.ROOMS = {
     },
     
         screeningRoom: {
-        bg: "market/nightmarket-Screening-daytime-bg.png",
+        bg: "market/243281506_1285173875244686_6257270391588318534_n.png",
         avatarScale: 2,
         frames: 3,
         frameDelay: 10,
